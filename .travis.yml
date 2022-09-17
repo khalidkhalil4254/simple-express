@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-express . #this command used to build an img with the current dockerfile with name specified
-  - docker tag simple-express khalid5165/simple-express:try1
+  - docker tag simple-express khalid5165/simple-express:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
